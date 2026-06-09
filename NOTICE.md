@@ -37,3 +37,7 @@ Some files in this repository originate from third‑party sources and are licen
 	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 	SOFTWARE.
+
+You may obtain the original files at
+	
+	https://github.com/PacktPublishing/ROS-2-from-Scratch
