@@ -2,7 +2,7 @@
 This is a collection of scripts to automate common ROS workflows like e.g. creating nodes, packages, workspaces, ...
 
 ### Overview
-- [CMD arguments](#CMD-arguments)
+- [Usage](#Usage)
 - [Installation](#Installation)
 - [How to Contribute](#How-to-Contribute)
 	- [Repository structure](#Repository-structure)
@@ -14,8 +14,8 @@ This is a collection of scripts to automate common ROS workflows like e.g. creat
 	- [Third-Party Assets](#Third-Party-Assets)
 - [Disclaimer](#Disclaimer)
 
-### CMD arguments
-TODO: A tabele containing all possible CMD-Arguments
+### Usage
+TODO: A table containing all possible CMD-Arguments
 
 ### Installation
 TODO: Add an installation script
@@ -27,7 +27,6 @@ TODO: Explain the manual installation
 Please see the full [CONTRIBUTING.md](https://github.com/naibaf-1/ROS-TO-CMD/blob/main/CONTRIBUTING.md) for further guidlines. Since this project adheres to a [CODE_OF_CONDUCT](https://github.com/naibaf-1/ROS-TO-CMD/blob/main/CODE_OF_CONDUCT.md), you're expected to uphold this code.
 
 #### Repository structure
-TODO: Explain the structure
 This is how the repository is structured. Please follow this structure when contributing:
 ```
 |-- rosToCMD // Folder containing the sub scripts
