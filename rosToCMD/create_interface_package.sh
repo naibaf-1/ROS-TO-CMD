@@ -1,19 +1,12 @@
 #!/bin/bash
 
-# ----------------------------------------------------------------------------------------
-# Global variables
-# ----------------------------------------------------------------------------------------
 # Get the values of the CMD arguments (ignore the name of the script which is $0)
 packagePath=$1
 packageName=$2
 
-# ----------------------------------------------------------------------------------------
-# Functions
-# ----------------------------------------------------------------------------------------
+# Const values
+PARENT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )/../.." && pwd )"
 
-# ----------------------------------------------------------------------------------------
-# The skript itself
-# ----------------------------------------------------------------------------------------
 # Check the arguments
 if [ -z "$packagePath" ]; then
 	echo "ERROR: You have to provide a path of the workspace"
@@ -34,9 +27,6 @@ ros2 pkg create "$packageName"
 rm -r "${packagePath}/${packageName}/src/" "${packagePath}/${packageName}/include/"
 cd "$packageName"
 mkdir "msg" "srv" "action"
-
-# TODO: Replace the package.xml and the CMakeLists.txt by the templates
-PARENT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )/../.." && pwd )"
 
 # Replace the package.xml by the template
 if [ -f "${PARENT_DIR}/schemas/interface_package-xml.txt" ]; then
