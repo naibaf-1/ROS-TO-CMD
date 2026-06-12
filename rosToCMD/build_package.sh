@@ -19,7 +19,7 @@ if [ ! -d "$workspaceRootPath" ]; then
 	echo "ERROR: Unable to find the workspace"
 	exit 3
 fi
-if [ ! -d "${workspaceRootPath}/${packageName}" ]; then
+if [[ "$packageName" != "*" && ! -d "${workspaceRootPath}/${packageName}" ]]; then
 	echo "ERROR: Unable to find the package"
 	exit 4
 fi
