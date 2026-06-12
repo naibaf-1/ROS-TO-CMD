@@ -14,7 +14,7 @@ HELP_MESSAGE="This is a list of all possible subcommands and their arguments:
 	Create a new package for nodes. Supported languages: python/cpp
 3. --cip <path_for_the_package> <name_of_the _package>:
 	Create a new package for interfaces.
-4. --cw <path_of_the_workspace> <name_of_the_workspace> <source_the_workspace>:
+4. --cw <path_of_the_workspace> <name_of_the_workspace>:
 	Create a new workspace and source it.
 5. --bp <path_to_workspace> <workspace_name>:
 	Build a certain package by providing a name. Use * to build all packages at once.
@@ -33,15 +33,15 @@ if [ "$firstArgument" = "--h" ]; then
 	echo "$HELP_MESSAGE"
 elif [ "$firstArgument" = "--bp" ]; then
 	"$PARENT_DIR"/rosToCMD/build_package.sh "$secondArgument" "$thirdArgument" "$fourthArgument"
-elif [ "firstArgument" = "--cip" ]; then
+elif [ "$firstArgument" = "--cip" ]; then
 	"$PARENT_DIR"/rosToCMD/create_interface_package.sh "$secondArgument" "$thirdArgument" "$fourthArgument"
 elif [ "$firstArgument" = "--cn" ]; then
 	"$PARENT_DIR"/rosToCMD/create_node.sh "$secondArgument" "$thirdArgument" "$fourthArgument"
 elif [ "$firstArgument" = "--cnp" ]; then
 	"$PARENT_DIR"/rosToCMD/create_node_package.sh "$secondArgument" "$thirdArgument" "$fourthArgument"
-elif [ "$firstArgument" = "-cw" ]; then
+elif [ "$firstArgument" = "--cw" ]; then
 	"$PARENT_DIR"/rosToCMD/create_workspace.sh "$secondArgument" "$thirdArgument" "$fourthArgument"
-elif [ "$firstArgument" = "-ci" ]; then
+elif [ "$firstArgument" = "--ci" ]; then
 	"$PARENT_DIR"/rosToCMD/create_interface.sh "$secondArgument" "$thirdArgument" "$fourthArgument"
 else
 	echo "ERROR: Unknown argument. Enter --h for help."
