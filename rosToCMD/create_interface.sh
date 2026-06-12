@@ -56,5 +56,13 @@ perl -0777 -i.bak -pe 's/(rosidl_generate_interfaces\(.*?)\n(\s*\))/ $1 . "\n" .
 }
 rm "CMakeLists.txt.bak"
 
+# Build the package
+WORKSPACE_PATH="$( cd "${packagePath}/.." && pwd )"
+PARENT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )/../.." && pwd )"
+"$PARENT_DIR"/rosToCMD/build_package.sh "$WORKSPACE_PATH" "*"
+
+# Describe how to implement the interface
+echo "You can implement the new interface by adding it as an dependency of your node."
+
 # Close with success
 echo "Success"
