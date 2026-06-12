@@ -36,7 +36,7 @@ elif [ "firstArgument" = "--cip" ]; then
 elif [ "$firstArgument" = "--cn" ]; then
 	"$PARENT_DIR"/rosToCMD/create_node.sh "$secondArgument" "$thirdArgument" "$fourthArgument"
 elif [ "$firstArgument" = "--cbp" ]; then
-	"$PARENT_DIR"/rosToCMD/create_package.sh "$secondArgument" "$thirdArgument" "$fourthArgument"
+	"$PARENT_DIR"/rosToCMD/create_node_package.sh "$secondArgument" "$thirdArgument" "$fourthArgument"
 elif [ "$firstArgument" = "-cw" ]; then
 	"$PARENT_DIR"/rosToCMD/create_workspace.sh "$secondArgument" "$thirdArgument" "$fourthArgument"
 else
