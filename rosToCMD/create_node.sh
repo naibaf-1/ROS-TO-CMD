@@ -99,8 +99,11 @@ fi
 cd "$directoryPath"
 if [ "$language" = "python" ]; then
 	createPythonNode
-else
+else if [ "$language" = "cpp" ]; then
 	createCppNode
+else
+	echo "ERROR: Unsupported language. You need to choose python or cpp"
+	exit 8
 fi
 
 # Return success
