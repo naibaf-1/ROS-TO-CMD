@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Get the values of the CMD arguments (ignore the name of the script which is $0)
-packageName=$1
-workspaceRootPath=$2
+workspaceRootPath=$1
+packageName=$2
 
 # Make sure all argumants where provided
 if [ -z "$packageName" ]; then
