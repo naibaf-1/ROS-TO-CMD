@@ -86,7 +86,7 @@ if [ -z "$fileName" ]; then
 fi
 
 if [ -z "$language" ]; then
-	echo "ERROR: You need to specify a language (python/c++)"
+	echo "ERROR: You need to specify a language (python/cpp)"
 	exit 3
 fi
 
@@ -99,7 +99,7 @@ fi
 cd "$directoryPath"
 if [ "$language" = "python" ]; then
 	createPythonNode
-else if [ "$language" = "cpp" ]; then
+elif [ "$language" = "cpp" ]; then
 	createCppNode
 else
 	echo "ERROR: Unsupported language. You need to choose python or cpp"
