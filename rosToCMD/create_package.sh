@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # Get the values of the CMD arguments (ignore the name of the script which is $0)
-packageLanguage=$1
-packagePath=$2
-packageName=$3
+packagePath=$1
+packageName=$2
+packageLanguage=$3
 
 # Check the arguments
 if [ -z "$packageLanguage" ]; then
@@ -27,9 +27,9 @@ if [ "$packageLanguage" = "python" ]; then
 		echo "ERROR: Couldn't create a python new package"
 		exit 4
 	}
-elif [ "$packageLanguage" = "cmake" ]; then
+elif [ "$packageLanguage" = "cpp" ]; then
 	ros2 pkg create "$packageName" --build-type ament_cmake --dependencies rclcpp || {
-		echo "ERROR: Couldn't create a cmake new package"
+		echo "ERROR: Couldn't create a cpp new package"
 		exit 5
 	}
 else
