@@ -8,14 +8,14 @@ fourthArgument=$4
 # Constant values
 PARENT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 HELP_MESSAGE="This is a list of all possible subcommands and their arguments:
-1. --cip <path_for_the_package> <name_of_the _package>:
-	Create a new package for interfaces
-2. --cn <directoy_path> <file_name> <programming_language>:
+1. --cn <directoy_path> <file_name> <programming_language>:
 	Create a new python/cpp node
-3. --cbp <programming_language> <path_for_the_package> <name_of_the_package>:
+2. --cbp <path_for_the_package> <name_of_the_package> <programming_language>:
 	Create a new package for python/cpp nodes
+3. --cip <path_for_the_package> <name_of_the _package>:
+	Create a new package for interfaces
 4. --cw <path_of_the_workspace> <name_of_the_workspace> <source_the_workspace>:
-	Create a new package and source it (if true)
+	Create a new workspace and source it if <source_the_workspace> is true.
 5. --bp <path_to_workspace> <workspace_name>:
 	Build a certain package by providing a name. Otherwise enter *
 "
