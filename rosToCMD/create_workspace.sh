@@ -3,7 +3,6 @@
 # Get the values of the CMD arguments (ignore the name of the script which is $0)
 workspacePath=$1
 workspaceName=$2
-sourceWorkspace=$3
 
 # Verify the path isn't empty
 if [ -z "$workspacePath" ]; then
@@ -32,10 +31,8 @@ colcon build || {
 	exit 5
 }
 
-# If wanted source the workspace
-if [ "$sourceWorkspace" = "true" ]; then
-	source "${workspacePath}/${workspaceName}/install/setup.bash"
-fi
+# Source the workspace
+source "${workspacePath}/${workspaceName}/install/setup.bash"
 
 # Finish and return success
 echo "Success"
